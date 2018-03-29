@@ -6,9 +6,10 @@
 import Carousel from './components/Carousel';
 import { default as ModalGateway } from './components/Modal/Gateway';
 import { default as Modal } from './components/Modal/Modal';
-import { components } from './components/defaultComponents';
+import { defaultCarouselComponents, defaultModalComponents } from './components/defaultComponents';
 
-Carousel.components = components;
+Carousel.defaultCarouselComponents = defaultCarouselComponents;
+Carousel.defaultModalComponents = defaultModalComponents;
 Carousel.Modal = Modal;
 Carousel.ModalGateway = ModalGateway;
 

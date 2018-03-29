@@ -53,31 +53,31 @@ export default [
     external: external,
     plugins: [babel(babelOptions(false)), injectSecret()],
   },
-  {
-    input: 'src/index.umd.js',
-    output: {
-      name: name,
-      file: path + '.js',
-      format: 'umd',
-      globals: globals,
-    },
-    external: external,
-    plugins: [babel(babelOptions(false)), injectSecret(), resolve()],
-  },
-  {
-    input: 'src/index.umd.js',
-    output: {
-      name: name,
-      file: path + '.min.js',
-      format: 'umd',
-      globals: globals,
-    },
-    external: external,
-    plugins: [
-      babel(babelOptions(true)),
-      injectSecret(),
-      resolve(),
-      uglify({}, minify),
-    ],
-  },
+  // {
+  //   input: 'src/index.umd.js',
+  //   output: {
+  //     name: name,
+  //     file: path + '.js',
+  //     format: 'umd',
+  //     globals: globals,
+  //   },
+  //   external: external,
+  //   plugins: [babel(babelOptions(false)), injectSecret(), resolve()],
+  // },
+  // {
+  //   input: 'src/index.umd.js',
+  //   output: {
+  //     name: name,
+  //     file: path + '.min.js',
+  //     format: 'umd',
+  //     globals: globals,
+  //   },
+  //   external: external,
+  //   plugins: [
+  //     babel(babelOptions(true)),
+  //     injectSecret(),
+  //     resolve(),
+  //     uglify({}, minify),
+  //   ],
+  // },
 ];
